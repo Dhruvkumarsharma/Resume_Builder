@@ -17,7 +17,7 @@ import { useFirestore } from 'react-redux-firebase';
       user = user.data();
       console.log(user);
       let newObj =null;
-      if(user.resumeIds!=undefined)
+      if(user.resumeIds!==undefined)
        newObj = {...user.resumeIds,[documentd.id]:{educationSection:educationSection,contactSection:contactSection,document:documentd}}
        else
        newObj={[document.id]:{educationSection:educationSection,contactSection:contactSection,document:document}}
